@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 
 from amazon_ai_coo.domain.models import (
     ActionProposal,
@@ -135,7 +135,7 @@ class DecisionEngine:
         if clear_goal is None or clear_goal.deadline is None or days_of_supply is None:
             return bundle
 
-        now = datetime.now(timezone.utc)
+        now = datetime.now(UTC)
         remaining_days = max((clear_goal.deadline - now).total_seconds() / 86400, 0)
         if days_of_supply > remaining_days and (contribution_margin_pct or 0) > 0:
             evidence = [
