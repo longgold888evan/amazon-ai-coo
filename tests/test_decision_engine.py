@@ -1,4 +1,4 @@
-from datetime import datetime, timedelta, timezone
+from datetime import UTC, datetime, timedelta
 
 from amazon_ai_coo.domain.models import (
     ActionType,
@@ -69,7 +69,7 @@ def test_clearance_rule_respects_goal_and_positive_margin():
         goals=[
             SellerGoal(
                 type=GoalType.CLEAR_INVENTORY,
-                deadline=datetime.now(timezone.utc) + timedelta(days=60),
+                deadline=datetime.now(UTC) + timedelta(days=60),
             )
         ],
     )
