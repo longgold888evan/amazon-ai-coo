@@ -34,15 +34,17 @@ class GuardrailEngine:
                 return GuardrailDecision(False, "budget change exceeds configured maximum")
 
         if action.action_type == ActionType.ADJUST_PRICE:
-            # Third-party competitor estimates can create a hypothesis, never an automatic price write.
             return GuardrailDecision(False, "price changes require simulation and explicit human approval in V0")
 
         if action.action_type == ActionType.UPDATE_LISTING:
             return GuardrailDecision(False, "listing writes are disabled in V0")
 
         margin = state.economics.get("contribution_margin_pct")
-        if margin and isinstance(margin.value, (int, float)):
-            if float(margin.value) < self.min_contribution_margin_pct:
-                return GuardrailDecision(False, "contribution margin is below configured floor")
+        if (
+            margin
+            and isinstance(margin.value, (int, float))
+            and float(margin.value) < self.min_contribution_margin_pct
+        ):
+            return GuardrailDecision(False, "contribution margin is below configured floor")
 
         return GuardrailDecision(True, "passed V0 guardrails")
