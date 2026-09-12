@@ -1,0 +1,30 @@
+version: 1
+updated_at: 2026-09-12
+missing_or_partial:
+  - id: youlianhui_230k_manual
+    priority: P0
+    status: MISSING
+    wanted: "优联荟讲师提到的约23万字 Amazon 实战手册，官方/授权原文件"
+    preferred_formats: [docx, pdf, feishu_export, markdown]
+    reason: "Largest current operator-knowledge gap."
+  - id: youlianhui_templates
+    priority: P0
+    status: MISSING
+    wanted: "优联荟最新版选品、广告、Listing、库存、补货、利润、竞品分析 SOP/Excel 模板"
+    preferred_formats: [xlsx, docx, pdf]
+    reason: "Templates map naturally into schemas and decision policies."
+  - id: amazon_ads_academy_full_content
+    priority: P1
+    status: PARTIAL
+    wanted: "登录后课程正文/讲义/可下载 guide/transcript（在授权允许范围内）"
+    reason: "Public material is sufficient for v1; complete Academy corpus improves ad decision policy."
+  - id: keepa_live_data
+    priority: P1_LATER
+    status: REQUIRES_SUBSCRIPTION
+    wanted: "Active Keepa API subscription configured in backend secret storage."
+    reason: "Needed for live competitor market state, not for knowledge ingestion."
+  - id: seller_central_private_signals
+    priority: P0_WHEN_INTEGRATING
+    status: REQUIRES_AUTH
+    wanted: "SP-API/Ads API authorization for seller data; Seller Central-only exports for gaps not covered by APIs."
+    reason: "Required for real Unified Seller State, not static knowledge."

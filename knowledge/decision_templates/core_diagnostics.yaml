@@ -1,0 +1,56 @@
+version: 1
+rules:
+  - id: search_impression_drop
+    status: EXPERIMENTAL
+    preconditions: ["search_query_performance_available"]
+    signals: ["impressions_down", "query_volume_stable_or_up"]
+    candidate_action: "Investigate indexing/relevance, organic rank, paid visibility and inventory/offer availability before changing PDP content."
+    expected_effect: "Recover eligible visibility without blindly increasing spend."
+    risk: LOW
+    reversible: true
+    approval_required: false
+    measurement_window_days: 7
+
+  - id: high_impression_low_ctr
+    status: EXPERIMENTAL
+    preconditions: ["search_funnel_available"]
+    signals: ["impressions_healthy", "ctr_below_baseline"]
+    candidate_action: "Rank hypotheses across main image, title relevance, price, rating and delivery/offer competitiveness; propose a controlled change."
+    expected_effect: "Increase qualified click-through rate."
+    risk: LOW
+    reversible: true
+    approval_required: true
+    measurement_window_days: 7
+
+  - id: ctr_healthy_purchase_weak
+    status: EXPERIMENTAL
+    preconditions: ["search_funnel_available"]
+    signals: ["ctr_healthy", "purchase_rate_low"]
+    candidate_action: "Inspect PDP value proposition, price/coupon, reviews/returns, delivery promise and variation fit before increasing traffic."
+    expected_effect: "Improve conversion before buying additional traffic."
+    risk: LOW
+    reversible: true
+    approval_required: true
+    measurement_window_days: 14
+
+  - id: profitable_ads_inventory_risk
+    status: EXPERIMENTAL
+    preconditions: ["ads_state_available", "inventory_state_available", "leadtime_available"]
+    signals: ["ads_profitable", "projected_stockout_before_replenishment"]
+    candidate_action: "Protect inventory by reducing marginal/non-core spend before cutting high-value demand capture; quantify lost contribution vs stockout cost."
+    expected_effect: "Reduce stockout probability while preserving high-value traffic."
+    risk: MEDIUM
+    reversible: true
+    approval_required: true
+    measurement_window_days: 7
+
+  - id: review_topic_deterioration
+    status: EXPERIMENTAL
+    preconditions: ["customer_feedback_available"]
+    signals: ["negative_topic_mentions_up", "rating_or_return_signal_worsening"]
+    candidate_action: "Open a product-quality investigation linking topic → affected ASIN/variation → return reasons → supplier/QC action."
+    expected_effect: "Reduce future returns and rating degradation by fixing root product issues."
+    risk: LOW
+    reversible: false
+    approval_required: true
+    measurement_window_days: 30

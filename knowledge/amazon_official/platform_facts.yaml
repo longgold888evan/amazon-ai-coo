@@ -1,0 +1,50 @@
+version: 1
+retrieved_at: 2026-09-12
+items:
+  - id: official_sp_api_ai_index
+    type: platform_fact
+    status: VALID
+    source_id: amazon_sp_api_docs
+    statement: "Amazon SP-API developer documentation exposes an llms.txt Markdown index for AI agents and OpenAPI endpoint models."
+    implication: "Build a scheduled documentation sync instead of maintaining a manually copied static API knowledge base."
+    actionability: FACT_ONLY
+
+  - id: official_orders_api_current_version
+    type: platform_fact
+    status: VALID
+    source_id: amazon_sp_api_docs
+    statement: "Orders API v0 is deprecated; current Orders API is v2026-01-01."
+    implication: "New integration work should target the current API and isolate legacy adapters."
+    actionability: APPROVAL_REQUIRED
+
+  - id: official_search_funnel_reports
+    type: platform_fact
+    status: VALID
+    source_id: amazon_sp_api_release_notes
+    statement: "Brand Analytics reports include Search Catalog Performance and Search Query Performance metrics for impressions, clicks, cart adds, and purchases."
+    implication: "Model search performance as a staged funnel and diagnose drop-off by stage."
+    actionability: FACT_ONLY
+
+  - id: official_search_query_multi_asin
+    type: platform_fact
+    status: VALID
+    source_id: amazon_sp_api_release_notes
+    statement: "Search Query Performance Report supports querying a space-separated ASIN list subject to the documented length limit."
+    implication: "The read layer can batch limited multi-ASIN query-performance requests."
+    actionability: FACT_ONLY
+
+  - id: official_customer_feedback_weekly
+    type: platform_fact
+    status: VALID
+    source_id: amazon_customer_feedback_api
+    statement: "Customer Feedback API exposes review insights at ASIN/browse-node level and return insights at browse-node level; data refreshes weekly."
+    implication: "Use review/return topics as product-quality and product-development signals, not as a real-time stream."
+    actionability: FACT_ONLY
+
+  - id: seller_university_public
+    type: platform_fact
+    status: VALID
+    source_id: seller_university
+    statement: "Seller University is publicly accessible without a selling account and covers more than 125 topics."
+    implication: "Use it as an official operating-SOP knowledge source that can be periodically refreshed."
+    actionability: FACT_ONLY

@@ -1,0 +1,25 @@
+version: 1
+policy: "Never convert these legacy/operator tactics into recommendations or actions."
+blocked_patterns:
+  - id: fake_orders
+    examples: ["刷单", "测评单", "fake order", "artificial purchase"]
+    reason: "Manipulates platform/customer signals and creates account/compliance risk."
+  - id: incentivized_reviews
+    examples: ["返现换评价", "gift for review", "incentivized review"]
+    reason: "Review manipulation is not an acceptable operating tactic."
+  - id: review_manipulation
+    examples: ["操纵评论", "要求删除差评换补偿", "review vote manipulation"]
+    reason: "Must not manipulate review outcomes."
+  - id: ranking_manipulation
+    examples: ["人为冲词排名", "manipulate ranking via artificial conversion"]
+    reason: "Do not fabricate behavioral signals to manipulate ranking."
+  - id: account_evasion
+    examples: ["规避账号关联风控", "multiple accounts to evade enforcement"]
+    reason: "Do not design automation to evade platform enforcement or account controls."
+  - id: unauthorized_scraping_or_automation
+    examples: ["simulate high-rate Seller Central clicks", "bypass rate limits"]
+    reason: "Prefer supported APIs and documented interfaces; do not automate around platform controls."
+runtime_behavior:
+  on_match: BLOCK_ACTION
+  log_reason: true
+  allow_historical_analysis: true

@@ -1,0 +1,80 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://amazon-ai-coo.local/schemas/knowledge_item.schema.json",
+  "title": "KnowledgeItem",
+  "type": "object",
+  "required": [
+    "id",
+    "type",
+    "status",
+    "source_id",
+    "actionability"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "type": {
+      "enum": [
+        "platform_fact",
+        "policy_rule",
+        "metric_definition",
+        "diagnostic_rule",
+        "decision_rule",
+        "operator_principle",
+        "experiment_template",
+        "source_pointer"
+      ]
+    },
+    "status": {
+      "enum": [
+        "VALID",
+        "REVIEW_REQUIRED",
+        "STALE",
+        "DEPRECATED",
+        "BLOCKED_BY_POLICY",
+        "HYPOTHESIS",
+        "EXPERIMENTAL"
+      ]
+    },
+    "source_id": {
+      "type": "string"
+    },
+    "statement": {
+      "type": "string"
+    },
+    "principle": {
+      "type": "string"
+    },
+    "actionability": {
+      "enum": [
+        "FACT_ONLY",
+        "RECOMMEND_ONLY",
+        "APPROVAL_REQUIRED",
+        "AUTO_ELIGIBLE"
+      ]
+    },
+    "marketplace": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "retrieved_at": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date"
+    },
+    "last_verified_at": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date"
+    }
+  },
+  "additionalProperties": true
+}

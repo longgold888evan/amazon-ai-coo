@@ -1,0 +1,19 @@
+version: 1
+precedence:
+  - rank: 1
+    source_type: amazon_policy_current
+  - rank: 2
+    source_type: amazon_official_current
+  - rank: 3
+    source_type: amazon_first_party_signal
+  - rank: 4
+    source_type: verified_operator_recent
+  - rank: 5
+    source_type: verified_operator_historical
+  - rank: 6
+    source_type: community_unverified
+conflict_resolution:
+  - "Higher-ranked current sources override lower-ranked sources."
+  - "A newer official deprecation or policy notice overrides historical implementation guidance."
+  - "Operator knowledge may suggest hypotheses but cannot override Amazon policy."
+  - "If freshness cannot be established for a time-sensitive rule, mark REVIEW_REQUIRED."

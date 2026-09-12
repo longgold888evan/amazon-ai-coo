@@ -1,0 +1,36 @@
+version: 1
+source_id: keepa_api
+status: VALID
+purpose: "External competitive market-state enrichment."
+recommended_entities:
+  product:
+    - asin
+    - title
+    - category
+    - brand
+  price_history:
+    - amazon_price
+    - new_buy_box_price
+    - new_offer_price
+    - historical_price_series
+  rank_history:
+    - bsr
+    - category_rank
+    - historical_rank_series
+  offers:
+    - offer_count
+    - buy_box_seller
+    - fulfillment_type
+  seller:
+    - seller_id
+    - rating
+    - feedback_count
+  market_events:
+    - price_drop
+    - buy_box_change
+    - offer_count_change
+    - bsr_regime_change
+integration:
+  mode_preference: "Keepa direct API or official hosted MCP, selected by backend architecture."
+  auth: "Keep API key in secret storage; never commit it to git."
+  requirement: "Active Keepa API subscription."

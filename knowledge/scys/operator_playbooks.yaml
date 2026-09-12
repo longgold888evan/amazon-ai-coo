@@ -1,0 +1,65 @@
+version: 1
+items:
+  - id: laohuangniu_product_development_system
+    source_id: scys_operator_laohuangniu_2025
+    type: operator_principle
+    status: HYPOTHESIS
+    principle: >
+      Build a repeatable product-development system instead of chasing single hero products; every launch should generate first-party learning that improves the next launch.
+    reusable_loop:
+      - observe_market
+      - choose_weak_competitive_wedge
+      - launch_small
+      - read_ads_orders_reviews_returns
+      - reflect_on_failure_and_success
+      - update_product_selection_model
+    actionability: RECOMMEND_ONLY
+
+  - id: laohuangniu_cash_over_accounting_profit
+    source_id: scys_operator_laohuangniu_2025
+    type: operator_principle
+    status: VALID
+    principle: "Accounting profit is insufficient; inventory and growth can consume cash faster than the business generates it."
+    required_runtime_metrics:
+      - cash_on_hand
+      - committed_purchase_orders
+      - inbound_inventory_value
+      - fba_inventory_value
+      - payout_schedule
+      - days_inventory_outstanding
+    actionability: RECOMMEND_ONLY
+
+  - id: zhangziqing_stop_doing_list
+    source_id: scys_operator_zhangziqing_2025
+    type: decision_rule
+    status: HYPOTHESIS
+    rule: >
+      Reject opportunities outside the seller's capability circle. Evaluate profitability/ROI, lifecycle quality,
+      competitive structure, unmet customer pain, CPC sustainability, seasonality/search stability and working-capital burden.
+    actionability: RECOMMEND_ONLY
+
+  - id: zhangziqing_resilience_through_portfolio
+    source_id: scys_operator_zhangziqing_2025
+    type: operator_principle
+    status: HYPOTHESIS
+    principle: >
+      Avoid excessive dependency on a single ASIN/store by considering a portfolio of economically viable links, subject to current Amazon policy and operational complexity.
+    actionability: RECOMMEND_ONLY
+
+  - id: lissa_product_quality_ops_service_system
+    source_id: scys_operator_lissa_2020
+    type: operator_principle
+    status: REVIEW_REQUIRED
+    principle: "Treat product selection, quality iteration, operations and customer service as one operating system with explicit ownership and feedback loops."
+    safe_components:
+      - competitor_listing_analysis
+      - customer_pain_analysis
+      - visual_and_copy_requirements
+      - quality_review_loop
+      - fast_customer_service
+      - unit_economics
+    blocked_components:
+      - fake_orders_or_reviews
+      - incentivized_reviews
+      - review_or_ranking_manipulation
+    actionability: RECOMMEND_ONLY

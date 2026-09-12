@@ -1,0 +1,43 @@
+version: 1
+source_id: amazon_ads_academy
+status: REVIEW_REQUIRED
+notes:
+  - "Amazon Ads Academy includes courses, learning paths, videos, certifications and scenario-based learning."
+  - "Full catalog ingestion should be completed using an authorized Academy session or downloadable materials where available."
+core_model:
+  dimensions:
+    - campaign_goal
+    - lifecycle_stage
+    - query_or_target_intent
+    - bid
+    - budget
+    - placement
+    - impressions
+    - clicks
+    - ctr
+    - cpc
+    - conversions
+    - cvr
+    - spend
+    - sales
+    - acos
+    - roas
+    - tacos
+    - organic_rank_or_share
+    - gross_margin
+    - inventory_cover_days
+rules:
+  - id: ads_do_not_optimize_acos_in_isolation
+    type: operator_principle
+    status: VALID
+    statement: >
+      ACOS is not a sufficient optimization objective. Evaluate contribution margin, TACOS,
+      organic rank/share, product lifecycle, inventory and campaign purpose before changing bids or budget.
+    actionability: RECOMMEND_ONLY
+  - id: ads_low_risk_write_path
+    type: decision_rule
+    status: EXPERIMENTAL
+    statement: >
+      Start write automation with reversible low-risk actions such as bounded bid/budget changes and pausing clearly wasteful targets,
+      under explicit daily/weekly spend and change-rate limits.
+    actionability: APPROVAL_REQUIRED

@@ -1,0 +1,37 @@
+version: 1
+model: amazon_search_funnel
+source_id: amazon_brand_analytics
+stages:
+  - name: impression
+    key_metrics: [query_volume, impressions, impression_share]
+    common_diagnoses:
+      - indexing_or_relevance_gap
+      - organic_rank_gap
+      - paid_visibility_gap
+      - category_demand_change
+  - name: click
+    key_metrics: [clicks, click_rate, click_share]
+    common_diagnoses:
+      - main_image_competitiveness
+      - price_competitiveness
+      - title_relevance
+      - rating_social_proof
+      - delivery_offer_competitiveness
+  - name: cart_add
+    key_metrics: [cart_adds, cart_add_rate, cart_add_share]
+    common_diagnoses:
+      - weak_value_proposition
+      - pdp_content_gap
+      - option_or_bundle_mismatch
+      - price_value_mismatch
+  - name: purchase
+    key_metrics: [purchases, purchase_rate, purchase_share]
+    common_diagnoses:
+      - checkout_offer_issue
+      - delivery_issue
+      - coupon_or_price_issue
+      - trust_review_issue
+      - stock_availability_issue
+runtime_rule: >
+  Funnel stage diagnosis is a hypothesis generator, not a causal proof. Combine with seller state,
+  ads data, offer state, inventory, review/return topics and controlled experiments before executing changes.

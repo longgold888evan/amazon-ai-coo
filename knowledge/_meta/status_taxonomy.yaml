@@ -1,0 +1,14 @@
+version: 1
+validity_states:
+  VALID: "Current enough and safe for reasoning."
+  REVIEW_REQUIRED: "Must be checked against current Amazon official documentation before execution."
+  STALE: "Historical insight may remain useful, but time-sensitive details should not be trusted."
+  DEPRECATED: "Replaced by a newer API, workflow, or policy."
+  BLOCKED_BY_POLICY: "Never generate an executable action from this knowledge."
+  HYPOTHESIS: "Operator insight; require seller-specific evidence before recommendation."
+  EXPERIMENTAL: "Can be tested only with explicit measurement and reversible guardrails."
+actionability:
+  FACT_ONLY: "Context only; no direct action."
+  RECOMMEND_ONLY: "May support a recommendation but cannot auto-execute."
+  APPROVAL_REQUIRED: "Can produce an executable proposal requiring human approval."
+  AUTO_ELIGIBLE: "Can be automated only when runtime guardrails explicitly allow it."

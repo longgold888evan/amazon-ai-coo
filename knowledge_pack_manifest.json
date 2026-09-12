@@ -1,0 +1,78 @@
+{
+  "version": "0.1",
+  "generated_at": "2026-09-12",
+  "files": {
+    "KNOWLEDGE_PACK_README.md": {
+      "sha256": "5806c434163624019c29e2612093e71f473993015e14c2e3f94d4cd0a9c70460",
+      "bytes": 1510
+    },
+    "docs/knowledge_architecture.md": {
+      "sha256": "8d09d4bec1b2de577bb9e55d19aeec52655624c4f42c3d9dbcf087f90e515e6f",
+      "bytes": 2182
+    },
+    "knowledge/_meta/source_registry.yaml": {
+      "sha256": "e1ac2dc042c7113a03dfa05c99b5b9579e570643e866cf7bd80a1dfff5a0091a",
+      "bytes": 4266
+    },
+    "knowledge/_meta/status_taxonomy.yaml": {
+      "sha256": "32cf0cab3eea760984d7a5dc1c6b2cfa87c0d0815ea71572c5a526941402585f",
+      "bytes": 906
+    },
+    "knowledge/amazon_ads/ads_knowledge.yaml": {
+      "sha256": "ffd23d070df0b1b73fadf3a17dee52f11624fc14629bfded4ee4fe7e3a337568",
+      "bytes": 1343
+    },
+    "knowledge/amazon_official/brand_analytics_funnel.yaml": {
+      "sha256": "d535b0de989d1843fb5a69a5bfce4fcb5e16f958d0dc711361248eab9009644f",
+      "bytes": 1237
+    },
+    "knowledge/amazon_official/platform_facts.yaml": {
+      "sha256": "7530dbba591bb189436658d4a10d532371b61bafd1e27f8afce73bec99832468",
+      "bytes": 2369
+    },
+    "knowledge/decision_templates/core_diagnostics.yaml": {
+      "sha256": "40160bfdd6e967012bc27fc227d31dd32f365e7824f4fa445f7620c421fbf4e1",
+      "bytes": 2591
+    },
+    "knowledge/keepa/market_state.yaml": {
+      "sha256": "09f3137695258c316a78b87c78a61dd2729c45c3de0a2ff160d2d1a6e5e29ef1",
+      "bytes": 832
+    },
+    "knowledge/missing_sources.yaml": {
+      "sha256": "36b4116224d7b0231142b0e0fe179b547a3ad69d068bff5f6381209c10fdb37d",
+      "bytes": 1451
+    },
+    "knowledge/scys/2022-11-amazon-entry/README.md": {
+      "sha256": "60c2625fff933c6e63121b56851d038067110b1313b5e569c8634f9329044090",
+      "bytes": 1286
+    },
+    "knowledge/scys/2022-11-amazon-entry/decision_principles.yaml": {
+      "sha256": "0dfbfdde3945ce568272d3e9115c3647e2d5f67f3f43a0832352f65062ba6402",
+      "bytes": 2631
+    },
+    "knowledge/scys/operator_playbooks.yaml": {
+      "sha256": "8dc00df0fbbe3adf931d4a26b300be38efeabec3240231c79a3e341b7d504a91",
+      "bytes": 2577
+    },
+    "policies/blocked_legacy_tactics.yaml": {
+      "sha256": "5abdd9d1075445aa63d0d4681fb0441b890277fc37c936bf0a879e3173b0893a",
+      "bytes": 1359
+    },
+    "policies/knowledge_precedence.yaml": {
+      "sha256": "ac14b4e6d75450e6185e99e76198ae1a8deaaba3dc8a868c2fb86d6cacac10b4",
+      "bytes": 703
+    },
+    "schemas/decision_rule.schema.json": {
+      "sha256": "e26b69d3b6b0217321fb12a783ca498d541bc70c25373225fadc019b6bfb9609",
+      "bytes": 1039
+    },
+    "schemas/knowledge_item.schema.json": {
+      "sha256": "599d23e5fa2fabe00a2e928a87b7ca9874d6f7263ed9193dcc0915f8291a7439",
+      "bytes": 1472
+    },
+    "scripts/validate_knowledge.py": {
+      "sha256": "842379b2d88335327c97fac1f9e2ead42ec5092b92ec9cdbd87d8a316c440340",
+      "bytes": 793
+    }
+  }
+}

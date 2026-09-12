@@ -1,0 +1,76 @@
+version: 1
+source_id: scys_amazon_manual_2022_11
+items:
+  - id: niche_fit_before_scale
+    type: operator_principle
+    status: HYPOTHESIS
+    principle: "Choose a market whose competitive intensity fits the seller's current capability and capital base before pursuing scale."
+    evidence_to_check:
+      - market_demand
+      - competitor_strength
+      - expected_cpc
+      - contribution_margin
+      - working_capital_required
+    actionability: RECOMMEND_ONLY
+
+  - id: demand_competition_ratio
+    type: operator_principle
+    status: HYPOTHESIS
+    principle: "Evaluate opportunities using demand relative to competitive supply, rather than demand size alone."
+    evidence_to_check:
+      - query_volume
+      - search_result_competition
+      - review_moat
+      - seller_concentration
+      - price_dispersion
+    actionability: RECOMMEND_ONLY
+
+  - id: pain_to_product_iteration
+    type: operator_principle
+    status: VALID
+    principle: "Mine reviews, returns, Q&A and competitor weaknesses to create prioritized product improvements."
+    evidence_to_check:
+      - negative_review_topics
+      - return_topics
+      - support_tickets
+      - competitor_review_topics
+    actionability: APPROVAL_REQUIRED
+
+  - id: leadtime_is_capital_metric
+    type: operator_principle
+    status: VALID
+    principle: "Lead time is a capital-efficiency variable, not only a logistics metric."
+    evidence_to_check:
+      - production_days
+      - domestic_handling_days
+      - freight_days
+      - receiving_days
+      - payout_delay
+      - inventory_cover_days
+      - cash_committed
+    decision_use: "Compare apparently cheaper supply/logistics choices using capital turnover, stockout risk and contribution profit per unit of committed capital."
+    actionability: RECOMMEND_ONLY
+
+  - id: small_batch_learning
+    type: operator_principle
+    status: HYPOTHESIS
+    principle: "Use smaller initial batches to buy information cheaply when product-market fit is uncertain."
+    evidence_to_check:
+      - moq
+      - unit_cost_delta
+      - stockout_cost
+      - failure_probability
+      - liquidation_value
+    actionability: APPROVAL_REQUIRED
+
+  - id: optimize_total_profit_system
+    type: operator_principle
+    status: VALID
+    principle: "Optimize total system profit across price, sourcing, freight, storage, ads, returns and inventory instead of optimizing one local metric."
+    actionability: RECOMMEND_ONLY
+
+  - id: supplier_quality_loop
+    type: operator_principle
+    status: VALID
+    principle: "Close the loop from reviews/returns to supplier QC and product iteration."
+    actionability: APPROVAL_REQUIRED

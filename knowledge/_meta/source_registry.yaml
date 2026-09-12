@@ -1,0 +1,105 @@
+version: 1
+retrieved_at: 2026-09-12
+sources:
+  - id: amazon_sp_api_docs
+    name: Amazon Selling Partner API Documentation
+    source_type: amazon_official_current
+    authority: S_PLUS
+    retrieval_status: PUBLIC_AVAILABLE
+    url: https://developer-docs.amazon.com/sp-api
+    machine_index: https://developer-docs.amazon.com/llms.txt
+    notes: "Amazon documents an AI-agent-friendly Markdown index and OpenAPI endpoint models."
+
+  - id: amazon_sp_api_release_notes
+    name: SP-API Release Notes
+    source_type: amazon_official_current
+    authority: S_PLUS
+    retrieval_status: PUBLIC_AVAILABLE
+    url: https://developer-docs.amazon.com/sp-api/docs/sp-api-release-notes
+    notes: "Treat as the source of truth for API changes and deprecations."
+
+  - id: seller_university
+    name: Amazon Seller University
+    source_type: amazon_official_current
+    authority: S
+    retrieval_status: PUBLIC_AVAILABLE
+    url: https://sell.amazon.com/learn/seller-university
+    notes: "Public without seller login as of 2026-07-02; 125+ topics, videos and downloadable guides."
+
+  - id: amazon_ads_academy
+    name: Amazon Ads Academy
+    source_type: amazon_official_current
+    authority: S
+    retrieval_status: PARTIAL_PUBLIC_LOGIN_FOR_FULL_CATALOG
+    url: https://advertising.amazon.com/academy
+    notes: "Public catalog exists; a free Academy account unlocks the full learning experience."
+
+  - id: amazon_brand_analytics
+    name: Amazon Brand Analytics
+    source_type: amazon_first_party_signal
+    authority: S_PLUS
+    retrieval_status: PUBLIC_CONCEPTS_SELLER_DATA_REQUIRES_ACCESS
+    url: https://sell.amazon.com/tools/amazon-brand-analytics
+    notes: "Search Catalog Performance and Search Query Performance expose funnel metrics and brand/query share."
+
+  - id: amazon_customer_feedback_api
+    name: Customer Feedback API
+    source_type: amazon_first_party_signal
+    authority: S_PLUS
+    retrieval_status: PUBLIC_DOCS_PRIVATE_DATA_REQUIRES_AUTH
+    url: https://developer-docs.amazon.com/sp-api/docs/customer-feedback-api
+    notes: "Provides review/return insights related to Product Opportunity Explorer; data refreshed weekly."
+
+  - id: keepa_api
+    name: Keepa API / MCP Server
+    source_type: external_market_data
+    authority: A
+    retrieval_status: PUBLIC_DOCS_SUBSCRIPTION_REQUIRED_FOR_DATA
+    url: https://keepa.com/api-docs/
+    mcp_url: https://keepa.com/api-docs/mcp.html
+    notes: "Official hosted MCP exists; active API subscription and API key are required for data calls."
+
+  - id: scys_amazon_manual_2022_11
+    name: 亚马逊入门｜实战手册｜2022年11月航海
+    source_type: verified_operator_historical
+    authority: A
+    retrieval_status: CONNECTOR_READ_COMPLETE
+    corpus_size_chars: 92611
+    source_locator:
+      platform: scys
+      activity_id: "428"
+      item_id: "4901"
+    notes: "Full manual was read through the authorized SCYS connector. Store normalized learnings, not a verbatim corpus dump."
+
+  - id: scys_operator_laohuangniu_2025
+    name: 新人如何跨界做项目-以亚马逊为例
+    source_type: verified_operator_recent
+    authority: A
+    retrieval_status: CONNECTOR_READ_COMPLETE
+    source_locator:
+      platform: scys
+      entity_type: xq_topic
+      entity_id: "5125228154188244"
+    notes: "Useful for capability-circle, cash-flow, first-party learning and product-development-system principles."
+
+  - id: scys_operator_zhangziqing_2025
+    name: 亚马逊的六大核心难点问题和对应解决方案
+    source_type: verified_operator_recent
+    authority: A
+    retrieval_status: CONNECTOR_READ_COMPLETE
+    source_locator:
+      platform: scys
+      entity_type: xq_topic
+      entity_id: "1524814458881152"
+    notes: "Useful for Stop Doing List, portfolio resilience, SOP modularization and lead-time/capital-efficiency thinking."
+
+  - id: scys_operator_lissa_2020
+    name: 10人团队做亚马逊年营收7000w的方法论
+    source_type: verified_operator_historical
+    authority: A_MINUS
+    retrieval_status: CONNECTOR_READ_COMPLETE
+    source_locator:
+      platform: scys
+      entity_type: xq_topic
+      entity_id: "241141458255151"
+    notes: "Retain product/quality/operations/service system design; block legacy review/ranking manipulation tactics."
