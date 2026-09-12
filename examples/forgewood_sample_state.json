@@ -1,0 +1,118 @@
+{
+  "identity": {
+    "asin": "B0FORGEWOOD",
+    "sku": "RING-TOSS-DEMO",
+    "marketplace_id": "ATVPDKIKX0DER",
+    "title": "Forgewood Games Ring Toss Game"
+  },
+  "sales": {
+    "revenue_7d": {
+      "value": 4200,
+      "source": "amazon_sp_api",
+      "data_type": "first_party",
+      "confidence": "high",
+      "unit": "USD",
+      "window": "7d"
+    },
+    "units_7d": {
+      "value": 160,
+      "source": "amazon_sp_api",
+      "data_type": "first_party",
+      "confidence": "high",
+      "window": "7d"
+    },
+    "units_change_pct_7d": {
+      "value": -0.2,
+      "source": "amazon_sp_api",
+      "data_type": "first_party",
+      "confidence": "high",
+      "unit": "ratio",
+      "window": "7d_vs_previous_7d"
+    }
+  },
+  "ads": {
+    "spend_7d": {
+      "value": 900,
+      "source": "amazon_ads",
+      "data_type": "first_party",
+      "confidence": "high",
+      "unit": "USD",
+      "window": "7d"
+    },
+    "acos_7d": {
+      "value": 0.24,
+      "source": "amazon_ads",
+      "data_type": "first_party",
+      "confidence": "high",
+      "unit": "ratio",
+      "window": "7d"
+    },
+    "budget_utilization_7d": {
+      "value": 0.95,
+      "source": "amazon_ads",
+      "data_type": "first_party",
+      "confidence": "high",
+      "unit": "ratio",
+      "window": "7d"
+    }
+  },
+  "inventory": {
+    "fulfillable_units": {
+      "value": 487,
+      "source": "amazon_sp_api",
+      "data_type": "first_party",
+      "confidence": "high",
+      "unit": "units"
+    },
+    "days_of_supply": {
+      "value": 145,
+      "source": "derived",
+      "data_type": "derived",
+      "confidence": "medium",
+      "unit": "days"
+    }
+  },
+  "pricing": {
+    "price": {
+      "value": 24.99,
+      "source": "amazon_sp_api",
+      "data_type": "first_party",
+      "confidence": "high",
+      "unit": "USD"
+    }
+  },
+  "market": {
+    "competitor_price_median": {
+      "value": 22.49,
+      "source": "sellersprite",
+      "data_type": "market_intelligence",
+      "confidence": "medium",
+      "unit": "USD"
+    }
+  },
+  "economics": {
+    "contribution_margin_pct": {
+      "value": 0.18,
+      "source": "derived",
+      "data_type": "derived",
+      "confidence": "medium",
+      "unit": "ratio"
+    },
+    "break_even_acos": {
+      "value": 0.38,
+      "source": "derived",
+      "data_type": "derived",
+      "confidence": "medium",
+      "unit": "ratio"
+    }
+  },
+  "goals": [
+    {
+      "type": "clear_inventory",
+      "deadline": "2026-12-31T23:59:59Z",
+      "constraints": {
+        "protect_brand": true
+      }
+    }
+  ]
+}
