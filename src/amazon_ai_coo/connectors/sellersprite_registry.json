@@ -1,0 +1,79 @@
+{
+  "source": "SellerSprite MCP",
+  "verified_at": "2026-09-12",
+  "official_catalog_url": "https://open.sellersprite.com/mcp",
+  "role": "external_market_intelligence",
+  "source_priority": {
+    "rule": "amazon_first_party_over_sellersprite_for_same_seller_owned_fact",
+    "amazon_ads_api": 1,
+    "amazon_sp_api_and_brand_analytics": 1,
+    "internal_business_data": 1,
+    "sellersprite_mcp": 3
+  },
+  "supported_marketplaces": ["US", "JP", "UK", "DE", "FR", "IT", "ES", "CA", "IN", "MX"],
+  "defaults": {
+    "prefer_return_fields": true,
+    "observe_only": true,
+    "third_party_must_not_override_first_party": true
+  },
+  "tools": [
+    {"code":"competitor_lookup","category":"product_asin","name_cn":"查竞品","purpose":"Look up target/competitor ASIN commercial metrics and detail","amazon_overlap":"competitor data is generally external; for our own ASIN true sales use SP-API first"},
+    {"code":"product_research","category":"product_asin","name_cn":"选产品","purpose":"Screen products by sales, revenue, growth, price, reviews, BSR and other filters","amazon_overlap":"external market research"},
+    {"code":"product_node","category":"product_asin","name_cn":"查产品类目","purpose":"Resolve category/node IDs, hierarchy and product counts","amazon_overlap":"use Amazon catalog data first for our own catalog identity when available"},
+    {"code":"asin_competitor","category":"product_asin","name_cn":"查询 ASIN 竞品数据","purpose":"Discover ASINs with strong competitive relationships to a target ASIN","amazon_overlap":"external competitor intelligence"},
+    {"code":"asin_detail","category":"product_asin","name_cn":"ASIN 详情","purpose":"Public-market ASIN profile including listing date, BSR, A+ and product/seller attributes","amazon_overlap":"for our own listing/catalog state use SP-API first"},
+    {"code":"asin_coupon_trend","category":"product_asin","name_cn":"ASIN 优惠趋势","purpose":"Historical coupon and promotion trend for an ASIN","amazon_overlap":"external competitor context; use first-party promotion data for our own offers when available"},
+    {"code":"asin_detail_with_coupon_trend","category":"product_asin","name_cn":"ASIN 详情及优惠趋势","purpose":"Combined ASIN detail and coupon trend","amazon_overlap":"first-party state still wins for our own ASIN"},
+    {"code":"asin_sales_trend","category":"product_asin","name_cn":"ASIN 销量趋势","purpose":"Estimated parent/child ASIN units and revenue trends","amazon_overlap":"for our own true units/revenue use SP-API first"},
+    {"code":"asin_prediction","category":"product_asin","name_cn":"ASIN 销量预测","purpose":"Estimate or predict sales for an ASIN","amazon_overlap":"prediction only; never override actual first-party sales"},
+    {"code":"bsr_prediction","category":"product_asin","name_cn":"BSR 销量预测","purpose":"Estimate sales from BSR","amazon_overlap":"prediction only"},
+    {"code":"keepa_info","category":"product_asin","name_cn":"商品趋势详情 (Keepa)","purpose":"Long-run history such as price, BSR, review count and rating trends","amazon_overlap":"external historical context"},
+
+    {"code":"traffic_keyword","category":"keyword_aba","name_cn":"关键词反查（流量词列表）","purpose":"ASIN to search keywords, exposure mix and ranking context","amazon_overlap":"for our own paid search-term performance use Amazon Ads API first"},
+    {"code":"keyword_research","category":"keyword_aba","name_cn":"关键词选品","purpose":"Evaluate keyword markets using demand, purchase rate and related metrics","amazon_overlap":"external keyword market intelligence"},
+    {"code":"keyword_research_trends","category":"keyword_aba","name_cn":"关键词选品-趋势数据","purpose":"Historical trend for a keyword","amazon_overlap":"supplement Brand Analytics / first-party search analytics when available"},
+    {"code":"keyword_miner","category":"keyword_aba","name_cn":"关键词挖掘","purpose":"Expand seed keywords into derivatives and long-tail terms","amazon_overlap":"external discovery"},
+    {"code":"traffic_extend","category":"keyword_aba","name_cn":"拓展流量词","purpose":"Multi-ASIN traffic keyword expansion","amazon_overlap":"external discovery"},
+    {"code":"keyword_conversion","category":"keyword_aba","name_cn":"关键字转化率","purpose":"Keyword conversion and market benchmark intelligence","amazon_overlap":"for our own CPC/click/order/ACOS use Amazon Ads API first"},
+    {"code":"aba_research_weekly","category":"keyword_aba","name_cn":"ABA 数据选品-按周","purpose":"Research/screen keywords using weekly ABA metrics","amazon_overlap":"use direct Brand Analytics first when the seller has equivalent owned access"},
+    {"code":"aba_research_monthly","category":"keyword_aba","name_cn":"ABA 数据选品-按月","purpose":"Research/screen keywords using monthly ABA metrics","amazon_overlap":"use direct Brand Analytics first when the seller has equivalent owned access"},
+    {"code":"aba_research_trend","category":"keyword_aba","name_cn":"ABA 数据选品-关键词趋势","purpose":"Historical ABA keyword trend","amazon_overlap":"supplement direct Brand Analytics"},
+    {"code":"google_trend","category":"keyword_aba","name_cn":"谷歌趋势","purpose":"External Google search trend for a keyword","amazon_overlap":"no Amazon-first equivalent for external Google trend"},
+    {"code":"keyword_order","category":"keyword_aba","name_cn":"出单词反查","purpose":"Reverse lookup an ASIN's top order-generating keywords","amazon_overlap":"for our own exact paid search term orders use Amazon Ads reports first"},
+
+    {"code":"traffic_listing","category":"traffic","name_cn":"关联流量列表","purpose":"Related-listing traffic sources for a product and variants","amazon_overlap":"external traffic intelligence"},
+    {"code":"traffic_keyword_stat","category":"traffic","name_cn":"流量词统计","purpose":"Aggregate keyword-traffic structure for an ASIN","amazon_overlap":"external/public traffic view"},
+    {"code":"traffic_listing_stat","category":"traffic","name_cn":"关联流量统计","purpose":"Aggregate related-listing traffic structure for an ASIN","amazon_overlap":"external/public traffic view"},
+    {"code":"traffic_source","category":"traffic","name_cn":"查流量来源（关键词流向）","purpose":"Find ASIN/keyword exposure flows from a query ASIN or keyword","amazon_overlap":"external/public traffic graph"},
+
+    {"code":"market_research","category":"market","name_cn":"选市场列表","purpose":"Base category/niche market research dataset","amazon_overlap":"external category intelligence"},
+    {"code":"market_research_statistics","category":"market","name_cn":"选市场-统计","purpose":"Aggregate category statistics","amazon_overlap":"external category intelligence"},
+    {"code":"market_product_concentration","category":"market","name_cn":"选市场-商品集中度","purpose":"Product concentration and head-product dominance","amazon_overlap":"external category intelligence"},
+    {"code":"market_brand_concentration","category":"market","name_cn":"选市场-品牌集中度","purpose":"Brand concentration","amazon_overlap":"external category intelligence"},
+    {"code":"market_seller_country_distribution","category":"market","name_cn":"选市场-卖家所属地分布","purpose":"Seller-country composition","amazon_overlap":"external category intelligence"},
+    {"code":"market_seller_concentration","category":"market","name_cn":"选市场-卖家集中度","purpose":"Seller concentration","amazon_overlap":"external category intelligence"},
+    {"code":"market_seller_type_concentration","category":"market","name_cn":"选市场-卖家类型分布","purpose":"Seller-type mix","amazon_overlap":"external category intelligence"},
+    {"code":"market_product_demand_trend","category":"market","name_cn":"选市场-商品需求趋势","purpose":"Product/category demand trend","amazon_overlap":"external category intelligence"},
+    {"code":"market_listing_date_distribution","category":"market","name_cn":"选市场-上架时间分布","purpose":"Listing-age distribution","amazon_overlap":"external category intelligence"},
+    {"code":"market_listing_trend_distribution","category":"market","name_cn":"选市场-上架趋势分布","purpose":"New-listing / listing-entry trend","amazon_overlap":"external category intelligence"},
+    {"code":"market_ratings_count_distribution","category":"market","name_cn":"选市场-评分数分布","purpose":"Review/rating-count distribution","amazon_overlap":"external category intelligence"},
+    {"code":"market_rating_distribution","category":"market","name_cn":"选市场-评分值分布","purpose":"Rating-value distribution","amazon_overlap":"external category intelligence"},
+    {"code":"market_price_distribution","category":"market","name_cn":"选市场-价格分布","purpose":"Price-band distribution","amazon_overlap":"external category intelligence"},
+    {"code":"market_ebc_distribution","category":"market","name_cn":"选市场-A+视频分布","purpose":"A+ / video content distribution","amazon_overlap":"external category intelligence"},
+
+    {"code":"review","category":"review","name_cn":"查评论","purpose":"Product reviews for pain-point, sentiment, feature-gap and differentiation analysis","amazon_overlap":"external/public review intelligence"},
+
+    {"code":"trademark_country_list","category":"trademark","name_cn":"全球商标库-数据范围","purpose":"Discover supported trademark-country datasets","amazon_overlap":"no Amazon-first equivalent"},
+    {"code":"trademark_detail","category":"trademark","name_cn":"全球商标库-详情","purpose":"Detailed trademark record","amazon_overlap":"no Amazon-first equivalent"},
+    {"code":"trademark_list","category":"trademark","name_cn":"全球商标库-列表","purpose":"Search/list trademark records","amazon_overlap":"no Amazon-first equivalent"},
+    {"code":"trademark_stats","category":"trademark","name_cn":"全球商标库-统计","purpose":"Aggregate trademark statistics","amazon_overlap":"no Amazon-first equivalent"}
+  ],
+  "routing_examples": {
+    "own_ads_performance": {"primary":"amazon_ads_api","sellersprite_secondary":["keyword_conversion","traffic_keyword"]},
+    "own_sales_inventory_listing": {"primary":"amazon_sp_api","sellersprite_secondary":["asin_detail","asin_sales_trend"]},
+    "competitor_discovery": {"primary":"sellersprite_mcp","tools":["asin_competitor","competitor_lookup"]},
+    "competitor_deep_dive": {"primary":"sellersprite_mcp","tools":["asin_detail","asin_sales_trend","asin_coupon_trend","keepa_info","traffic_keyword","keyword_order","review"]},
+    "keyword_opportunity": {"primary":"sellersprite_mcp","tools":["keyword_research","keyword_miner","keyword_conversion","aba_research_trend"]},
+    "category_attractiveness": {"primary":"sellersprite_mcp","tools":["product_node","market_research","market_research_statistics","market_product_concentration","market_brand_concentration","market_seller_concentration","market_product_demand_trend","market_listing_date_distribution","market_price_distribution","market_ratings_count_distribution"]}
+  }
+}
